@@ -5,7 +5,7 @@ window.addEventListener('keydown', event => {
         case 65:
             setBackgroundColor('cyan');
             break;
-        case 40:
+        case 66:
             addBorder();
             break;
         case 38:
@@ -14,8 +14,8 @@ window.addEventListener('keydown', event => {
         case 37:
             addImage();
             break;
-        case 39:
-            removeImage();
+        case 85:
+            fadeOut();
             break;
         case 80:
             animate();
@@ -23,19 +23,26 @@ window.addEventListener('keydown', event => {
         case 70:
             changeFont();
             break;
-        
-            
+        case 83:
+            changeFontSize();
+            break;
+        case 72:
+            changeFontColor();
+            break;
+        case 86:
+            createVideo();
+            break;
    } 
 });
 
 // Change the background color when a certain key is pressed
 function setBackgroundColor(color) {
-    document.querySelector('body').style.backgroundColor = color;
+    document.getElementById('elem1').style.backgroundColor = color;
 }
 
 // Add a border to an element when a certain key is pressed
 function addBorder() {
-    document.querySelector('h1').style.border = "thick dotted pink";
+    document.getElementById('addBorder').style.border = "thick dotted green";
 }
 
 // Animate an element when a certain key is pressed 
@@ -52,26 +59,53 @@ function animate() {
             elem.style.left = pos + 'px';
         }
     }
+     
 }
 
 // Change the font of an element
 function changeFont() {
-    document.getElementById("changeFont").style.fontFamily = "'Indie Flower', cursive;";
+    document.getElementById("changeFont").style.fontFamily = 'Dancing Script', cursive;
 }
 
 // Change the color of the circle
 function changeCircleColor() {
-    document.getElementById("animate").style.backgroundColor = "pink";
+    document.getElementById("animate").style.backgroundColor = "purple";
 }
 
 // Add an image
 function addImage() {
-    document.getElementById("bgImage").style.backgroundImage = "url(https://images.pexels.com/photos/210186/pexels-photo-210186.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)";
+    document.getElementById("image").src = "https://images.pexels.com/photos/210186/pexels-photo-210186.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+
 }
 
-function removeImage() {
-    document.getElementById("bgImage").style.backgroundImage = "none;"
+// Fade out the words
+function fadeOut() {
+    $("#fade").fadeOut();    
+
 }
+
+// Change the font size
+function changeFontSize() {
+    document.getElementById("fontSize").style.fontSize = "50px";
+}
+
+// Change the font color
+function changeFontColor() {
+    document.getElementById("fontColor").style.color = "#ff7b25";
+}
+
+function createVideo() {
+    var parent = document.getElementById("parent");
+    var child = document.getElementById("child");
+    parent.removeChild(child);
+    document.getElementById("video").src = "https://www.youtube.com/embed/-5Rka0TyrYw";
+    
+}
+
+
+
+
+
 
 
 

@@ -2,31 +2,130 @@
 <html>
     <head>
         <title>Key Events</title>
-        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <style>
+        
+     
             #animate {
-                width: 75px;
-                height: 75px;
+                width: 100px;
+                height: 100px;
                 border-radius: 50%;
-                position: absolute;
-                background-color: purple;
+                position: relative;
+                background-color: yellow; 
             }
+            * {
+                box-sizing: border-box;
+            }
+            
+            .column {
+                float: left;
+                width: 25%;
+                padding: 10px;
+                height: 300px;
+            }
+            
+            .row:after {
+                content: "";
+                dispaly: table;
+                clear: both;
+            }
+            
+            @media screen and (max-width: 600px) {
+                .column {
+                    width: 100%;
+                }
+            }            
+
         </style>
         
     </head>
     
-    <body id = "bgImage" style = "background-position: center; background-size: cover; background-repeat: no-repeat;">
-        <h1>Press the 'a' key to change the background color</h1>
-        <p>Press the 'p' key to animate the circle and the up arrow to change its color</p>
-        <div id = "animate"></div>
-        <div>
-            <p style = "font-size: 16px; text-align: center;" id = "changeFont">To change my font, press 'f'</p>
-        </div>
-    
 
+    <!-- Stlye all the text with the same font-->
+    <body style = "font-family: 'Quicksand', sans-serif; text-align: center;">
+       
+       <!-- Creates a div where a picture will be displayed-->
+        <div style = "height: 300px; width: auto; background-color: #b8a9c9;">
+          <p style = "text-align: center;">Hit the left arrow to display a picture below</p>
+          <img id = "image"  height = "100%" width = "100%">
+       </div>
+       <!--A div where the background color will change -->
+       <div class = "row" style = "margin-top: 20px; text-align: center; font-size: 25px;">
+           <div id = "elem1" class = "column" style = "background-color: #D4E0F7;">
+               <p>Press the 'a' to change the background color<p>
+           </div>
+           <!-- A div where the text will change size-->
+           <div class = "column" style = "background-color: #80ced6; margin-bottom: 0;">
+               <p id = "fontSize">Press the 's' to change the font size</p>
+           </div>
+           <!-- A div where the circle will change color and move depending on the key pressed -->
+           <div class = "column" style = "background-color: beige;">
+                <p id = "animate"></p>
+               <p style = "size: 12px; margin: 0;">Press the 'p' key to animate the circle and the up arrow to change its color</p>
+           </div>
+           <!-- A div where the text will change color-->
+           <div class = "column" style = "background-color: #700CBC;">
+              <p id = "fontColor">Press 'h' to change the font color</p>
+           </div>
+       </div>
+       <!-- Create a new row-->
+       <div class = "row" style = "text-align: center; font-size: 25px;">
+           <!-- A div where the text will change fonts-->
+           <div class = "column" style = "background-color: #eeac99;">
+               <p id = "changeFont">Press the 'f' to change the font</p>
+           </div>
+           <!-- A div where a border will be added-->
+           <div id = "addBorder" class = "column" style = "background-color: yellow;">
+               <p>Press the 'b' to add a border</p>
+           </div>
+           <!-- A div where a video will be added-->
+            <div id = "parent" class = "column" style = "background-color: #5b9aa0;">
+                <p id = "child">Press the 'v' to watch a video of cats getting brain freeze</p> 
+                <iframe id = "video" height="300" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+           </div>
+           <!-- A div where the text will fade out-->
+           <div class = "column" style = "background-color: orange;">
+               <p id = "fade" >Press the 'u' to make this text disappeart</p>
+           </div>
+       </div>
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
         
-                
+           
+    
     <script src = "tasks.js"></script>
     </body>
 </html>
