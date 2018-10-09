@@ -1,5 +1,13 @@
 /* global $*/
 
+// TL Without actual parameters for this assigment, it is hard to critique the design. 
+// TL Your indentation is lovely. Your code is very easy to read and very intuitive. 
+// Your comments are sililarly neat. 
+// TL you could use keyup to end some events. 
+// I suppose it is slightly annoying to have to use the ascii table to figure out what the cases mean, but I did the same. 
+// The function names are perfectly descriptive. 
+
+
 window.addEventListener('keydown', event => {
    switch(event.keyCode) {
         case 65:
@@ -34,6 +42,9 @@ window.addEventListener('keydown', event => {
             break;
    } 
 });
+
+
+
 
 // Change the background color when a certain key is pressed
 function setBackgroundColor(color) {
